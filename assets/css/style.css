@@ -2,11 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Golos Text', sans-serif;
 }
 
 /* utility */
 .flex{
     display: flex;
+}
+
+.column{
+    flex-direction: column;
 }
 
 .justify-content-between{
@@ -15,6 +20,17 @@
 
 .align-item-center{
     align-items: center;
+}
+
+.button{
+    border-radius: 1em;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.bg-blue{
+    background-color: #0084fd;
+    color: white;
 }
 
 /* header */
@@ -27,4 +43,137 @@ header .container{
 header div i{
     font-size: 1.5em;
     color: white;
+}
+
+/* main */
+
+/* cards */
+#cards{
+    width: 90%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em 0;
+}
+
+#cards .card{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2em;
+    background-color: #b5ddff;
+}
+
+#cards .card p{
+    color: #333333;
+    padding: 1em 0;
+    text-align: center;
+}
+
+#cards .card h3{
+    color: #0084fd;
+    padding: 1em 0;
+}
+
+#cards .card i{
+    font-size: 5em;
+    color: #0084fd;
+    padding: 0.5rem 0;
+}
+
+#cards .card .button i{
+    color: white;
+    font-size: 1em;
+    padding: 0;
+}
+
+/* planning */
+#planning{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #9792e4;
+    color: white;
+    padding: 1rem;
+}
+
+#planning img{
+    width: 100%;
+    margin: 2rem 0;
+}
+
+#planning h2{
+    margin: 2rem 0;
+}
+#planning p{
+    margin: 2rem 0;
+}
+
+#planning .card{
+    background-color: white;
+    color: #333333;
+    text-align: center;
+    border-radius: 2em;
+}
+
+#planning .card .button{
+    background-color: #9792e4;
+    border-radius: 50%;
+    padding: 1rem 1.3rem;
+    margin: 2rem 0;
+}
+
+/* testimonials */
+#testimonials{
+    width: 90%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em 0;
+    text-align: center;
+}
+
+#testimonials h2{
+    color: #9792e4;
+}
+
+#testimonials .card{
+    background-color: #9792e4;
+    color: white;
+    text-align: center;
+    border-radius: 2em;
+}
+
+#testimonials .card img{
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+#testimonials .card p{
+    line-height: 2em;
+}
+
+#testimonials .card h3{
+    text-transform: uppercase;
+    margin: 2rem 0 ;
+}
+
+blockquote p:before {
+    content: open-quote;
+    font-weight: bold;
+    font-size:2em
+}
+
+blockquote p:after {
+    content: close-quote;
+    font-weight: bold;
+    font-size:2em
+}
+
+/* responsive */
+/* tablet */
+@media screen and (min-height: 780px) {
+    
 }
