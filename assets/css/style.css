@@ -5,6 +5,10 @@
     font-family: 'Golos Text', sans-serif;
 }
 
+li{
+    list-style-type: none;
+}
+
 /* utility */
 .flex{
     display: flex;
@@ -18,12 +22,16 @@
     justify-content: space-between;
 }
 
+.justify-content-center{
+    justify-content: center;
+}
+
 .align-item-center{
     align-items: center;
 }
 
 .button{
-    border-radius: 1em;
+    border-radius: 2em;
     padding: 1rem;
     display: inline-block;
 }
@@ -34,15 +42,29 @@
 }
 
 /* header */
-header .container{
+header{
     width: 100%;
     background-color: #0084fd;
+}
+
+header .container{
+    width: 100%;
     padding: 1rem;
 }
 
 header div i{
     font-size: 1.5em;
     color: white;
+}
+
+header ul{
+    display: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 0 1em;
 }
 
 /* main */
@@ -63,13 +85,34 @@ header div i{
     background-color: #b5ddff;
 }
 
+#cards .app{
+    width: 100%;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 2em;
+    background-color: #b5ddff;
+}
+
+#cards .app-image img{
+    width: 100%;
+}
+
 #cards .card p{
     color: #333333;
     padding: 1em 0;
     text-align: center;
 }
 
+#cards .app p{
+    color: #333333;
+    padding: 1em 0;
+}
+
 #cards .card h3{
+    color: #0084fd;
+    padding: 1em 0;
+}
+
+#cards .app h3{
     color: #0084fd;
     padding: 1em 0;
 }
@@ -93,7 +136,7 @@ header div i{
     width: 100%;
     background-color: #9792e4;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 #planning img{
@@ -113,6 +156,10 @@ header div i{
     color: #333333;
     text-align: center;
     border-radius: 2em;
+}
+
+#planning .card p{
+    padding: 1rem 2rem;
 }
 
 #planning .card .button{
@@ -148,7 +195,7 @@ header div i{
     height: 12em;
     border-radius: 50%;
     object-fit: cover;
-    margin: 2rem 0;
+    margin: 2rem;
 }
 
 #testimonials .card p{
@@ -173,7 +220,60 @@ blockquote p:after {
 }
 
 /* responsive */
+
 /* tablet */
-@media screen and (min-height: 780px) {
+@media screen and (min-width: 768px) {
+    #cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #cards .app{
+        width: calc(((100% / 3) - 1%)*2);
+    }
+
+    #cards .card{
+        width: calc((100% / 3) - 3%);
+    }
+
+    #testimonials .card{
+        display: flex;
+        padding: 2rem;
+        text-align: start;
+    }
+
+    #testimonials .card p{
+        text-align: start;
+    }
+    
+}
+
+/* desktop */
+@media screen and (min-width: 1160px){
+    header .container,
+    #cards,
+    #planning .container,
+    #testimonials{
+        width: 1140px;
+        margin: 2em auto;
+    }
+
+    #planning .container{
+        display: flex;
+    }
+    
+    header ul{
+            display: flex;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+    .app{
+        flex-direction: row;
+    }
     
 }
