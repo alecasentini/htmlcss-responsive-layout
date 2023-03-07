@@ -32,13 +32,22 @@ li{
 
 .button{
     border-radius: 2em;
-    padding: 1rem;
+    padding: 1rem 5rem;
     display: inline-block;
+    text-decoration: none;
+    font-size: 1.3rem;
 }
 
 .bg-blue{
     background-color: #0084fd;
     color: white;
+}
+
+.button-white{
+    background-color: white;
+    color: black;
+    border-radius: 2em;
+    padding: 0.6rem;
 }
 
 /* header */
@@ -75,7 +84,7 @@ header ul li a{
     margin: 2em auto;
     display: flex;
     flex-direction: column;
-    gap: 1em 0;
+    gap: 2rem 0;
 }
 
 #cards .card{
@@ -167,6 +176,7 @@ header ul li a{
     border-radius: 50%;
     padding: 1rem 1.3rem;
     margin: 2rem 0;
+    color: black;
 }
 
 /* testimonials */
@@ -175,7 +185,7 @@ header ul li a{
     margin: 2em auto;
     display: flex;
     flex-direction: column;
-    gap: 1em 0;
+    gap: 2rem 0;
     text-align: center;
 }
 
@@ -219,6 +229,63 @@ blockquote p:after {
     font-size:2em
 }
 
+/* features */
+#features{
+    background-color: #9792e4;
+    color: white;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+}
+
+#features .cards{
+    width: 100%;
+    gap: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+}
+
+#features > h2{
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+#features .card{
+    background-color: white;
+    border-radius: 2em;
+    color: #333333;
+    padding: 2rem;
+}
+
+#features .card h2,
+#features .card h3{
+    color: #9792e4;
+}
+
+#features .card h2{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+#features .card h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.btn-more{
+    padding: 1rem 3rem;
+    background-color: #9792e4;
+    color: white;
+    text-decoration: none;
+    margin: 1rem 0;
+    border-radius: 2em;
+    display: inline-block;
+}
+
 /* responsive */
 
 /* tablet */
@@ -231,11 +298,15 @@ blockquote p:after {
     }
 
     #cards .app{
-        width: calc(((100% / 3) - 1%)*2);
+        width: calc(((100% / 3) * 2 ) - 1%);
     }
 
     #cards .card{
-        width: calc((100% / 3) - 3%);
+        width: calc((100% / 3) - 2%);
+    }
+
+    #cards .app-image img {
+        width: 50%;
     }
 
     #testimonials .card{
@@ -247,17 +318,32 @@ blockquote p:after {
     #testimonials .card p{
         text-align: start;
     }
+
+    #features .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #features .card{
+        width: calc(100%/2 - 2%);
+    }
     
 }
 
 /* desktop */
 @media screen and (min-width: 1160px){
-    header .container,
     #cards,
     #planning .container,
-    #testimonials{
+    #testimonials,
+    #features .cards{
         width: 1140px;
         margin: 2em auto;
+    }
+
+    header .container{
+        margin: 0 auto;
+        width: 1140px;
     }
 
     #planning .container{
@@ -265,15 +351,37 @@ blockquote p:after {
     }
     
     header ul{
-            display: flex;
-    }
-
-    .fa-bars{
-        display: none;
+        display: flex;
     }
 
     .app{
         flex-direction: row;
     }
+
+    .menu{
+        display: none;
+    }
     
+    #cards .app-image img {
+        width: 100%;
+    }
+
+    #planning .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+
+    #planning .card img{
+        width: 50%;
+        margin: 1rem auto;
+    }
+
+    #planning .card{
+        align-self: flex-end;
+    }
+
+    #features .card{
+        width: calc(100%/3 - 2%);
+    }
 }
