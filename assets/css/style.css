@@ -73,11 +73,7 @@ header ul{
 header ul li a{
     text-decoration: none;
     color: white;
-    margin: 0 1em;
-}
-
-header ul:last-child{
-    margin-right: 0;
+    margin-left:1em;
 }
 
 /* main */
