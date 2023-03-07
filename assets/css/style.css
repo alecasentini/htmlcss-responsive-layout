@@ -9,6 +9,10 @@ li{
     list-style-type: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* utility */
 .flex{
     display: flex;
@@ -493,6 +497,7 @@ footer .container p{
     header .container{
         margin: 0 auto;
         width: 1140px;
+        padding: 1rem 0;
     }
 
     #planning .container{
@@ -513,8 +518,16 @@ footer .container p{
         display: none;
     }
     
+    #cards .app-image,
+    #cards .app-description{
+        width: 50%;
+    }
+
     #cards .app-image img {
-        width: 100%;
+        width: 70%;
+        object-fit: cover;
+        margin: 0 auto;
+        align-self: flex-end;
     }
 
     #planning .container{
