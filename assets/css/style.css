@@ -76,6 +76,10 @@ header ul li a{
     margin: 0 1em;
 }
 
+header ul:last-child{
+    margin-right: 0;
+}
+
 /* main */
 
 /* cards */
@@ -384,6 +388,26 @@ i.fa-solid.fa-quote-left{
     margin: 0 auto;
 }
 
+/* footer */
+footer{
+    background-color: #333333;
+}
+
+footer .container{
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer .container a{
+    color: #9792e4;
+}
+
+footer .container p{
+    text-align: center;
+    padding: 2rem 0;
+}
+
 /* responsive */
 
 /* tablet */
@@ -443,6 +467,11 @@ i.fa-solid.fa-quote-left{
 
     #get-started .container{
         width: 768px;
+        margin: 0 auto;
+    }
+
+    footer .container{
+        width: 615px;
         margin: 0 auto;
     }
     
@@ -514,6 +543,11 @@ i.fa-solid.fa-quote-left{
 
     #get-started.container{
         width: 768px;
+        margin: 0 auto;
+    }
+
+    footer .container{
+        width: 615px;
         margin: 0 auto;
     }
 }
