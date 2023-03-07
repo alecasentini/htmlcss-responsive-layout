@@ -286,6 +286,62 @@ blockquote p:after {
     display: inline-block;
 }
 
+/* about-us */
+#about-us{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+}
+
+#about-us h2{
+    color: #9792e4;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+#about-us p{
+    line-height: 2rem;
+    margin: 2rem 0;
+}
+
+.about{
+    background-image: url(../img/about.jpg);
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+i.fa-solid.fa-quote-left{
+    color: #9792e4;
+    font-size: 60px;
+    position: absolute;
+    right: 0;
+}
+
+.about-us-2 h3{
+    color: #9792e4;
+    margin: 2rem 0;
+    line-height: 2rem;
+    font-size: 2rem;
+}
+
+.btn-lin{
+    padding: 0.7rem;
+    background-color: #9792e4;
+    color: white;
+    text-decoration: none;
+    margin: 1rem 0;
+    border-radius: 2em;
+    display: inline-block;
+
+}
+
+
 /* responsive */
 
 /* tablet */
@@ -328,6 +384,20 @@ blockquote p:after {
     #features .card{
         width: calc(100%/2 - 2%);
     }
+
+    #about-us{
+        flex-direction: row;
+    }
+
+    .about-us-1{
+        width: 65%;
+        margin-right: 2rem;
+    }
+
+    .about-us-2{
+        width: 35%;
+        margin: 1rem 0;
+    }
     
 }
 
@@ -336,7 +406,8 @@ blockquote p:after {
     #cards,
     #planning .container,
     #testimonials,
-    #features .cards{
+    #features .cards,
+    #about-us{
         width: 1140px;
         margin: 2em auto;
     }
@@ -383,5 +454,14 @@ blockquote p:after {
 
     #features .card{
         width: calc(100%/3 - 2%);
+    }
+    .about-us-1{
+        width: 70%;
+        margin-right: 5rem;
+    }
+
+    .about-us-2{
+        width: 30%;
+        margin: 1rem 0;
     }
 }
